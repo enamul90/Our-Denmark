@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
 
-
 :root {
     --grey-light: #F3F2F7;
+    --grey-medium: #4B5563;
     --pure-white: #FFFFFF;
-    --sky-blue: #0B5ED7;
+    --sky-blue: #60a5fa;
+    --sky-light: #e0f2fe;
+    /*--sky-light: #7DD3FC;*/
 }
 

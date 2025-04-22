@@ -6,19 +6,17 @@ import {
     Drawer,
     Avatar,
     IconButton,
-    Button, Typography
+    Typography
 } from "@mui/material";
 import { FaBars } from "react-icons/fa";
 import { IoNotificationsOutline } from "react-icons/io5";
 import Link from 'next/link';
-import {TbCurrencyTaka} from "react-icons/tb";
+import { TbCurrencyTaka } from "react-icons/tb";
 import Image from "next/image";
 import logo from '../../../public/images/logo.png';
 import SideNavbar from "@/component/Navbar/SideNavbar";
-import {MdMenuOpen} from "react-icons/md"; // ❌ This is incorrect
 
-
-const HEADER_HEIGHT = 72;
+const HEADER_HEIGHT = 60;
 
 const AppNavbar = ({ children }) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -35,21 +33,17 @@ const AppNavbar = ({ children }) => {
                     anchor="left"
                     open={sidebarOpen}
                     onClose={ToggleHandler}
-                    ModalProps={{ keepMounted: true ,}}
+                    ModalProps={{ keepMounted: true }}
                     PaperProps={{
                         sx: {
                             top: `${HEADER_HEIGHT}px`,
                             height: `calc(100% - ${HEADER_HEIGHT}px)`,
+                            bgcolor: "var(--pure-white)",
                         }
                     }}
                 >
-                    <Box
-                        width={250}
-                        padding={2}
-                        bgcolor="var(--sky-light)"
-                        sx={{ transition: 'width 0.5s ease' }}
-                    >
-                        Sidebar Content (Mobile)
+                    <Box width={260} padding={2}>
+                        <SideNavbar />
                     </Box>
                 </Drawer>
             );
@@ -66,10 +60,12 @@ const AppNavbar = ({ children }) => {
                 borderRight="1px solid #ddd"
                 padding={2}
                 bgcolor="var(--pure-white)"
-                textAlign="center"
-                sx={{ transition: 'width 0.5s ease' }}
+                sx={{
+                    transition: 'width 0.4s ease',
+                    overflowY: "auto"
+                }}
             >
-                <SideNavbar />
+                <SideNavbar sidebarOpen={sidebarOpen} />
             </Box>
         );
     };
@@ -84,7 +80,7 @@ const AppNavbar = ({ children }) => {
                 right={0}
                 zIndex={999999}
                 bgcolor="var(--pure-white)"
-                paddingX={{xs:1, md:3}}
+                px={{ xs: 1, md: 4 }}
                 height={`${HEADER_HEIGHT}px`}
                 borderBottom="1px solid #ddd"
                 display="flex"
@@ -92,48 +88,47 @@ const AppNavbar = ({ children }) => {
                 justifyContent="space-between"
             >
                 {/* Left section */}
-                <Box display="flex" alignItems="center" gap={{xs:0, md:2}}>
-                    <IconButton onClick={ToggleHandler} sx={{ color: "#0B5ED7" }}>
-                        {sidebarOpen ? (
-                            <MdMenuOpen size={30} />
-                        ) : (
-                            <FaBars size={24} />
-                        )}
+                <Box display="flex" alignItems="center" gap={{ xs: 0, md: 2 }}>
+                    <IconButton onClick={ToggleHandler} sx={{ color: "var(--sky-blue)" }}>
+                        <FaBars size={22} />
                     </IconButton>
 
-                    <Link href="/" className="flex items-center gap-1" >
-                        <Image
-                            width={40}
-                            height={40}
-                            src={logo}
-                            alt={"logo"}
-                        />
-                        <Typography variant={"body1"} sx={{
-                            color: "#0B5ED7",
-                            fontWeight: "bold",
-                            fontSize: {xs: "1rem", sm: "1.5rem"},
-                            display: {xs:"none",sm:"block"},
-                        }}>
+                    <Link href="/" className="flex items-center gap-2">
+                        <Image src={logo} width={40} height={40} alt="logo" />
+                        <Typography
+                            variant="h6"
+                            sx={{
+                                color: "var(--sky-blue)",
+                                fontWeight: "bold",
+                                fontSize: { xs: "1rem", sm: "1.5rem" },
+                                display: { xs: "none", sm: "block" },
+                            }}
+                        >
                             OUR-DENMARK
                         </Typography>
                     </Link>
                 </Box>
 
                 {/* Right section */}
-                <Box display="flex" alignItems="center" gap={{xs:0, md:3}}>
-                    <Link href="/" passHref legacyBehavior>
+                <Box display="flex" alignItems="center" gap={{ xs: 1, md: 3 }}>
+                    <Link href="/">
                         <Box
-                            color="#0B5ED7"
-                            size="medium"
-                            sx={{ textTransform: 'none' , display: 'flex', alignItems: 'center' }}
+                            display="flex"
+                            alignItems="center"
+                            color="var(--sky-blue)"
+                            sx={{ fontWeight: 600 }}
                         >
                             250 <TbCurrencyTaka />
                         </Box>
                     </Link>
+
                     <IconButton>
                         <IoNotificationsOutline size={22} />
                     </IconButton>
-                    <Avatar sx={{ width: 32, height: 32 }} />
+
+                    <IconButton>
+                        <Avatar sx={{ width: 32, height: 32 }} />
+                    </IconButton>
                 </Box>
             </Box>
 
@@ -142,9 +137,14 @@ const AppNavbar = ({ children }) => {
                 {renderSidebar()}
                 <Box
                     flex={1}
-                    padding={3}
+                    px={3}
+                    py={3}
                     marginLeft={isSmallScreen ? 0 : sidebarOpen ? '100px' : '250px'}
-                    sx={{ transition: 'margin-left 0.5s ease' }}
+                    sx={{
+                        transition: 'margin-left 0.4s ease',
+                        backgroundColor: 'var(--grey-light)',
+                        minHeight: `calc(100vh - ${HEADER_HEIGHT}px)`,
+                    }}
                 >
                     {children}
                 </Box>

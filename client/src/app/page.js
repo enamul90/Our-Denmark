@@ -1,9 +1,10 @@
 import React from 'react';
+import OrderList from "@/component/Dashboard/Order-List/Order-List";
 
 const Home = () => {
     return (
         <div>
-          This is home page
+            <OrderList />
         </div>
     );
 };
