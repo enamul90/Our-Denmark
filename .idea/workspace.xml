@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="399317a5-6e4e-4c39-8fc2-2621d97fa6b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/public/icons/security.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/Dashboard/Order-List/Order-List.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/next-i18next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/client/next.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/Navbar/AppNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Navbar/AppNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/Navbar/SideNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Navbar/SideNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/Dashboard/Order-List/Order-List.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Dashboard/Order-List/Order-List.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,7 @@
       <updated>1745251510833</updated>
       <workItem from="1745251513958" duration="5210000" />
       <workItem from="1745291833109" duration="12418000" />
-      <workItem from="1745315286708" duration="19096000" />
+      <workItem from="1745315286708" duration="26179000" />
     </task>
     <servers />
   </component>

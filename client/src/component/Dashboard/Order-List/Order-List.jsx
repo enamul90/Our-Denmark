@@ -7,25 +7,43 @@ import Marquee from "react-fast-marquee";
 const OrderList = () => {
 
     const orderList = [
-        {id: 1, item: 30,},
-        {id: 1, item: 50,},
-        {id: 1, item: 60,},
-        {id: 1, item: 40,},
-        {id: 1, item: 40,},
-        {id: 1, item: 30,},
-        {id: 1, item: 50,},
-        {id: 1, item: 60,},
-        {id: 1, item: 40,},
-        {id: 1, item: 40,},
-        {id: 1, item: 40,},
-        {id: 1, item: 30,},
-        {id: 1, item: 50,},
-        {id: 1, item: 60,},
-        {id: 1, item: 40,},
-        {id: 1, item: 40,},
-        {id: 1, item: 30,},
+        {id: 1, item: 30, title: "মোট ঝুলে থাকা অর্ডার"},
+        {id: 2, item: 50, title: "মোট অর্ডার"},
+        {id: 3, item: 60, title: "মোট ডেলিভারি"},
+        {id: 4, item: 40, title: "মোট বায়োমেট্রিক অর্ডার"},
+        {id: 5, item: 40, title: "মোট ডিলিট অর্ডার"},
+        {id: 6, item: 30, title: "মোট না পাওয়া অর্ডার"},
+        {id: 7, item: 50, title: "মোট ম্যাচ পাওয়া অর্ডার"},
+        {id: 8, item: 60, title: "মোট মৃত অর্ডার"},
+        {id: 9, item: 40, title: "মোট গ্রুপ যোগদান"},
     ]
 
+    const handler = (id) => {
+        if(id === 1){
+            alert(id)
+        }
+        else if(id === 2){
+            alert(id)
+        }
+        else if(id === 3){
+            alert(id)
+        }
+        else if(id === 4){
+            alert(id)
+        }
+        else if(id === 5){
+            alert(id)
+        }
+        else if(id === 7){
+            alert(id)
+        }
+        else if(id === 8){
+            alert(id)
+        }
+        else{
+            alert("9")
+        }
+    }
 
     return (
         <div>
@@ -61,7 +79,7 @@ const OrderList = () => {
                                             <Typography variant={"h4"}>
                                                 {order.item}
                                             </Typography>
-                                            <IconButton>
+                                            <IconButton onClick={() => handler(order.id)}>
                                                 <ArrowForwardIcon
                                                     sx={{
                                                         color: 'var(--sky-blue)',
@@ -70,7 +88,7 @@ const OrderList = () => {
                                             </IconButton>
                                         </Box>
                                         <Typography variant={"h6"}>
-                                            Total Pending Order
+                                            {order.title}
                                         </Typography>
                                     </CardContent>
                                 </Card>
