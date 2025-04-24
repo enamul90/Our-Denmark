@@ -142,7 +142,6 @@ const AppNavbar = ({ children }) => {
                     marginLeft={isSmallScreen ? 0 : sidebarOpen ? '100px' : '250px'}
                     sx={{
                         transition: 'margin-left 0.4s ease',
-                        backgroundColor: 'var(--grey-light)',
                         minHeight: `calc(100vh - ${HEADER_HEIGHT}px)`,
                     }}
                 >

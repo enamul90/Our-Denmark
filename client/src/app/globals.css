@@ -7,10 +7,12 @@
     --pure-white: #FFFFFF;
     --sky-blue: #60a5fa;
     --sky-light: #e0f2fe;
+    --vibrant-purple: #EC00FF;
     /*--sky-light: #7DD3FC;*/
 }
 
 
 body {
     font-family: 'Noto Sans Bengali', sans-serif;
+    background-color: var(--grey-light);
 }

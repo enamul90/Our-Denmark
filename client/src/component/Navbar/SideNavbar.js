@@ -2,44 +2,44 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import {Box, Typography, Tooltip, Stack, Divider} from "@mui/material";
+import { Box, Typography, Tooltip } from "@mui/material";
 import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
-import SegmentOutlinedIcon from '@mui/icons-material/SegmentOutlined';
-import {FaRegWindowMinimize} from "react-icons/fa";
+import { FaRegWindowMinimize } from "react-icons/fa";
 import {
-    BsBank, BsBank2,
     BsCreditCard2Front,
     BsDatabaseFillDown,
     BsFileEarmarkMedical,
-    BsPatchQuestionFill, BsShieldLockFill
+    BsPatchQuestionFill,
+    BsShieldLockFill,
+    BsBank2
 } from "react-icons/bs";
-import {CgProfile} from "react-icons/cg";
-import {IoPower} from "react-icons/io5";
-import {RiListUnordered} from "react-icons/ri";
-import {AiOutlineDashboard} from "react-icons/ai";
+import { CgProfile } from "react-icons/cg";
+import { IoPower } from "react-icons/io5";
+import { RiListUnordered } from "react-icons/ri";
+import { AiOutlineDashboard } from "react-icons/ai";
 
 const SideNavbar = ({ sidebarOpen }) => {
     const pathname = usePathname();
 
     const Navigation = [
         { path: '/', title: "Order Dashboard", Icons: <AiOutlineDashboard /> },
-        { path: '/1', title: "new nid", Icons: <BsCreditCard2Front /> },
-        { path: '/2', title: "server copy(Unofficial)", Icons: <BsDatabaseFillDown /> },
-        { path: '/3', title: "auto nid", Icons: <BsCreditCard2Front /> },
+        { path: '/new-nid', title: "new nid", Icons: <BsCreditCard2Front /> },
+        { path: '/server-copy/1', title: "server copy (Unofficial)", Icons: <BsDatabaseFillDown />, matchPrefix: '/server-copy' },
+        { path: '/auto-nid', title: "auto nid", Icons: <BsCreditCard2Front /> },
         { path: '/4', title: "auto e-tin", Icons: <BsFileEarmarkMedical /> },
         { path: '/5', title: "Date of Birth", Icons: <BsFileEarmarkMedical  /> },
         { path: '/6', title: "Death of Date", Icons: <BsFileEarmarkMedical  /> },
-        { path: '/7', title: "security clone",
-            Icons:
+        { path: '/7', title: "security clone", Icons: (
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M8 0a1 1 0 0 1 1 1v1.402c0 .511.677.693.933.25l.7-1.214a1 1 0 0 1 1.733 1l-.701 1.214c-.256.443.24.939.683.683l1.214-.701a1 1 0 0 1 1 1.732l-1.214.701c-.443.256-.262.933.25.933H15a1 1 0 1 1 0 2h-1.402c-.512 0-.693.677-.25.933l1.214.701a1 1 0 1 1-1 1.732l-1.214-.7c-.443-.257-.939.24-.683.682l.701 1.214a1 1 0 1 1-1.732 1l-.701-1.214c-.256.443-.933-.262-.933-.25V15a1 1 0 1 1-2 0v-1.402c0-.512-.677-.693-.933-.25l-.701 1.214a1 1 0 0 1-1.732-1l.7-1.214c.257-.443-.24-.939-.682-.683l-1.214.701a1 1 0 1 1-1-1.732l1.214-.701c.443-.256.939-.24.683-.683l-.701-1.214a1 1 0 0 1 1.732-1l.701 1.214c.256.443.933.261.933-.25V1a1 1 0 0 1 1-1m2 5a1 1 0 1 0-2 0 1 1 0 0 0 2 0M6 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0m1 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m5-3a1 1 0 1 0-2 0 1 1 0 0 0 2 0"/>
                 </svg>
-        },
+            ) },
         { path: '/8', title: "sign to server copy", Icons: <BsDatabaseFillDown  /> },
         { path: '/9', title: "File list", Icons: <RiListUnordered  /> },
         { path: '/10', title: "security list", Icons: <RiListUnordered /> },
         { path: '/11', title: "recharge", Icons: <BsBank2  /> },
     ];
+
     const Settings = [
         { path: '/12', title: "profile", Icons: <CgProfile /> },
         { path: '/13', title: "recover password", Icons: <BsShieldLockFill /> },
@@ -49,35 +49,18 @@ const SideNavbar = ({ sidebarOpen }) => {
 
     return (
         <Box py={3}>
-            {/* Dashboard Title */}
-            <Box
-                display="flex"
-                alignItems="center"
-                gap={1}
-                mb={4}
-                px={2}
-                justifyContent={sidebarOpen ? 'center' : 'flex-start'}
-            >
+            <Box display="flex" alignItems="center" gap={1} mb={4} px={2} justifyContent={sidebarOpen ? 'center' : 'flex-start'}>
                 <SpaceDashboardIcon sx={{ color: 'var(--sky-blue)' }} />
                 {!sidebarOpen && (
-                    <Typography
-                        variant="h6"
-                        sx={{
-                            color: 'var(--sky-blue)',
-                            fontWeight: 600,
-                            fontSize: "1.2rem"
-                        }}
-                    >
+                    <Typography variant="h6" sx={{ color: 'var(--sky-blue)', fontWeight: 600, fontSize: "1.2rem" }}>
                         Dashboard
                     </Typography>
                 )}
             </Box>
 
-            {/* Navigation Items */}
             <Box display="flex" flexDirection="column" gap={1}>
                 {Navigation.map((item, index) => {
-                    const isActive = pathname === item.path;
-
+                    const isActive = item.matchPrefix ? pathname.startsWith(item.matchPrefix) : pathname === item.path;
                     return (
                         <Link href={item.path} key={index}>
                             <Tooltip title={sidebarOpen ? item.title : ''} placement="right">
@@ -105,13 +88,7 @@ const SideNavbar = ({ sidebarOpen }) => {
                                         {item.Icons}
                                     </Box>
                                     {!sidebarOpen && (
-                                        <Typography
-                                            sx={{
-                                                fontSize: "0.9rem",
-                                                transition: 'color 0.3s ease',
-                                                fontWeight: isActive ? 700 : 500,
-                                            }}
-                                        >
+                                        <Typography sx={{ fontSize: "0.9rem", transition: 'color 0.3s ease', fontWeight: isActive ? 700 : 500 }}>
                                             {item.title}
                                         </Typography>
                                     )}
@@ -121,17 +98,16 @@ const SideNavbar = ({ sidebarOpen }) => {
                     );
                 })}
             </Box>
-            <Typography variant="body1"  component={"p"} sx={{paddingY:2, color:"var(--grey-medium)", paddingX:2}}>
-                {
-                    sidebarOpen ? <FaRegWindowMinimize /> : "Setting"
-                }
+
+            <Typography variant="body1" component="p" sx={{ paddingY: 2, color: "var(--grey-medium)", paddingX: 2 }}>
+                {sidebarOpen ? <FaRegWindowMinimize /> : "Setting"}
             </Typography>
+
             <Box display="flex" flexDirection="column" gap={1}>
                 {Settings.map((item, index) => {
                     const isActive = pathname === item.path;
-
                     return (
-                        <Link href={item.path} key={index}>
+                        <Link href={item.path} key={index} legacyBehavior>
                             <Tooltip title={sidebarOpen ? item.title : ''} placement="right">
                                 <Box
                                     sx={{
@@ -157,13 +133,7 @@ const SideNavbar = ({ sidebarOpen }) => {
                                         {item.Icons}
                                     </Box>
                                     {!sidebarOpen && (
-                                        <Typography
-                                            sx={{
-                                                fontSize: "0.9rem",
-                                                transition: 'color 0.3s ease',
-                                                fontWeight: isActive ? 700 : 500,
-                                            }}
-                                        >
+                                        <Typography sx={{ fontSize: "0.9rem", transition: 'color 0.3s ease', fontWeight: isActive ? 700 : 500 }}>
                                             {item.title}
                                         </Typography>
                                     )}

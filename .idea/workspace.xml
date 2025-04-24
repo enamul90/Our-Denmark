@@ -5,14 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="399317a5-6e4e-4c39-8fc2-2621d97fa6b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/next-i18next.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/auto-nid/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/new-nid/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/server-copy/1/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/server-copy/2/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/server-copy/3/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/server-copy/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/component/Auto-NID/Auto-Nid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/component/New_NID/New_NID.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/component/New_NID/Nid-Form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/component/New_NID/UploadFileBox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/component/Server_Copy/Server-Copy-Form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/component/Server_Copy/ServerCopy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/client/next.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/Dashboard/Order-List/Order-List.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Dashboard/Order-List/Order-List.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/Navbar/AppNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Navbar/AppNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/Navbar/SideNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Navbar/SideNavbar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="JSX File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -56,6 +66,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/component/Server_Copy" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -73,6 +88,10 @@
       <workItem from="1745251513958" duration="5210000" />
       <workItem from="1745291833109" duration="12418000" />
       <workItem from="1745315286708" duration="26179000" />
+      <workItem from="1745396385687" duration="73000" />
+      <workItem from="1745427790722" duration="4000" />
+      <workItem from="1745466017720" duration="2231000" />
+      <workItem from="1745506046290" duration="16205000" />
     </task>
     <servers />
   </component>
