@@ -23,11 +23,11 @@ const SideNavbar = ({ sidebarOpen }) => {
 
     const Navigation = [
         { path: '/', title: "Order Dashboard", Icons: <AiOutlineDashboard /> },
-        { path: '/new-nid', title: "new nid", Icons: <BsCreditCard2Front /> },
+        { path: '/new-nid/upload-file', title: "new nid", Icons: <BsCreditCard2Front /> , matchPrefix: '/new-nid' },
         { path: '/server-copy/1', title: "server copy (Unofficial)", Icons: <BsDatabaseFillDown />, matchPrefix: '/server-copy' },
         { path: '/auto-nid', title: "auto nid", Icons: <BsCreditCard2Front /> },
-        { path: '/4', title: "auto e-tin", Icons: <BsFileEarmarkMedical /> },
-        { path: '/5', title: "Date of Birth", Icons: <BsFileEarmarkMedical  /> },
+        { path: '/auto-etin', title: "auto e-tin", Icons: <BsFileEarmarkMedical /> },
+        { path: '/birth/birth-form', title: "Date of Birth", Icons: <BsFileEarmarkMedical  /> , matchPrefix: '/birth' },
         { path: '/6', title: "Death of Date", Icons: <BsFileEarmarkMedical  /> },
         { path: '/7', title: "security clone", Icons: (
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
@@ -107,7 +107,7 @@ const SideNavbar = ({ sidebarOpen }) => {
                 {Settings.map((item, index) => {
                     const isActive = pathname === item.path;
                     return (
-                        <Link href={item.path} key={index} legacyBehavior>
+                        <Link href={item.path} key={index} >
                             <Tooltip title={sidebarOpen ? item.title : ''} placement="right">
                                 <Box
                                     sx={{

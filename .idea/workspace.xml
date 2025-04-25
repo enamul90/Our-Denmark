@@ -5,24 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="399317a5-6e4e-4c39-8fc2-2621d97fa6b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/app/auto-nid/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/new-nid/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/server-copy/1/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/server-copy/2/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/server-copy/3/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/server-copy/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/Auto-NID/Auto-Nid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/New_NID/New_NID.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/New_NID/Nid-Form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/New_NID/UploadFileBox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/Server_Copy/Server-Copy-Form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/Server_Copy/ServerCopy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/auto-etin/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/birth/birth-form/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/birth/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/birth/upload-form/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/new-nid/manual-upload/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/new-nid/upload-file/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/component/DateOfBirth/DateOfBirth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/component/New_NID/NewNid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/component/auto-ETin/Auto-ETin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/Navbar/AppNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Navbar/AppNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/new-nid/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/new-nid/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/Auto-NID/Auto-Nid.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Auto-NID/Auto-Nid.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/component/Navbar/SideNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Navbar/SideNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/New_NID/New_NID.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/New_NID/Nid-Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/New_NID/Nid-Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/New_NID/UploadFileBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/New_NID/UploadFileBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/Server_Copy/Server-Copy-Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Server_Copy/Server-Copy-Form.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +67,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/component/auto-ETin" />
       <recent name="$PROJECT_DIR$/client/src/component/Server_Copy" />
     </key>
   </component>
@@ -91,7 +91,8 @@
       <workItem from="1745396385687" duration="73000" />
       <workItem from="1745427790722" duration="4000" />
       <workItem from="1745466017720" duration="2231000" />
-      <workItem from="1745506046290" duration="16205000" />
+      <workItem from="1745506046290" duration="16462000" />
+      <workItem from="1745568252703" duration="6681000" />
     </task>
     <servers />
   </component>

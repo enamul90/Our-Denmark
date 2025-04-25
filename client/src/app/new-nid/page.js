@@ -1,10 +1,10 @@
 import React from 'react';
-import NewNid from "@/component/New_NID/New_NID";
+import NewNID from "@/component/New_NID/NewNid";
 
 const Page = () => {
     return (
         <div>
-          <NewNid />
+            <NewNID />
         </div>
     );
 };

@@ -1,3 +1,4 @@
+'use client'
 import React, { useRef } from 'react';
 import { Box, IconButton, Typography } from '@mui/material';
 import { BsFileEarmarkPdf } from 'react-icons/bs';

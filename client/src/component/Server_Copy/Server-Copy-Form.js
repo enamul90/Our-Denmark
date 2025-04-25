@@ -38,7 +38,7 @@ const ServerCopyForm = () => {
                     sx={{
                         fontWeight: 'bold',
                         mb: 3,
-                        background: 'linear-gradient(to right, purple, red, blue)',
+                        background: 'linear-gradient(to right, purple, red)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                     }}
@@ -71,7 +71,7 @@ const ServerCopyForm = () => {
                         />
                     </Box>
 
-                    <Typography variant="body2" sx={{ color: 'green', mt: 1 }}>
+                    <Typography variant="body2" sx={{ color: 'green', mt: 1 ,}}>
                         Note: You will be charged 5 tk for this Server Copy V{activeVersion} creation!
                     </Typography>
 

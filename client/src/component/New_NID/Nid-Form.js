@@ -1,15 +1,16 @@
+'use client'
 import React from 'react';
 import {
     Box, Button,
     FormControl,
     Grid,
-    InputLabel,
+    InputLabel, Paper,
     TextField, Typography
 } from '@mui/material';
 
 const NidForm = () => {
     return (
-        <Box >
+        <Paper sx={{p:5 , my:5}}>
             <Grid container spacing={2}>
                 <Grid size={{xs:12 , md:6}}>
                     <FormControl fullWidth >
@@ -148,7 +149,7 @@ const NidForm = () => {
                     Save & Download
                 </Button>
             </Box>
-        </Box>
+        </Paper>
     );
 };
 

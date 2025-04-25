@@ -29,7 +29,7 @@ const AutoNid = () => {
                     gutterBottom
                     sx={{
                         textAlign:"center",
-                        background:'linear-gradient(to right, purple, red, blue)',
+                        background:'linear-gradient(to right, purple, red)',
                         WebkitBackgroundClip:'text',
                         WebkitTextFillColor:'transparent'
                     }}
@@ -87,7 +87,7 @@ const AutoNid = () => {
                         </Box>
                     )}
                     <Box>
-                        <Typography variant={"body1"} color={"green"} textAlign={"center"}>
+                        <Typography variant={"body2"} color={"green"}>
                             Note: You will be charged 15 tk for Auto NID creation!
                         </Typography>
                         <Button variant="contained"
