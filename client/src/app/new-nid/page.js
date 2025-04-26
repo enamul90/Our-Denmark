@@ -1,11 +1,12 @@
 import React from 'react';
-import NewNID from "@/component/New_NID/NewNid";
+import NidForm from "@/component/New_NID/Nid-Form";
+import {Box} from "@mui/material";
 
 const Page = () => {
     return (
-        <div>
-            <NewNID />
-        </div>
+        <Box>
+            <NidForm />
+        </Box>
     );
 };
 

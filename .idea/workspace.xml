@@ -5,23 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="399317a5-6e4e-4c39-8fc2-2621d97fa6b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/app/auto-etin/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/birth/birth-form/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/birth/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/birth/upload-form/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/new-nid/manual-upload/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/new-nid/upload-file/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/DateOfBirth/DateOfBirth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/New_NID/NewNid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/auto-ETin/Auto-ETin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/birth/birth-form/page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/birth/upload-form/page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/new-nid/manual-upload/page.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/new-nid/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/new-nid/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/Auto-NID/Auto-Nid.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Auto-NID/Auto-Nid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/new-nid/upload-file/page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/Dashboard/Order-List/Order-List.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Dashboard/Order-List/Order-List.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/DateOfBirth/DateOfBirth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/DateOfBirth/DateOfBirth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/component/Navbar/SideNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Navbar/SideNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/New_NID/New_NID.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/New_NID/NewNid.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/component/New_NID/Nid-Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/New_NID/Nid-Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/New_NID/UploadFileBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/New_NID/UploadFileBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/Server_Copy/Server-Copy-Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Server_Copy/Server-Copy-Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/New_NID/UploadFileBox.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +89,9 @@
       <workItem from="1745427790722" duration="4000" />
       <workItem from="1745466017720" duration="2231000" />
       <workItem from="1745506046290" duration="16462000" />
-      <workItem from="1745568252703" duration="6681000" />
+      <workItem from="1745568252703" duration="7014000" />
+      <workItem from="1745632583868" duration="4710000" />
+      <workItem from="1745637394193" duration="3086000" />
     </task>
     <servers />
   </component>

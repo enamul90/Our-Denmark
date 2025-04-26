@@ -23,21 +23,30 @@ const SideNavbar = ({ sidebarOpen }) => {
 
     const Navigation = [
         { path: '/', title: "Order Dashboard", Icons: <AiOutlineDashboard /> },
-        { path: '/new-nid/upload-file', title: "new nid", Icons: <BsCreditCard2Front /> , matchPrefix: '/new-nid' },
-        { path: '/server-copy/1', title: "server copy (Unofficial)", Icons: <BsDatabaseFillDown />, matchPrefix: '/server-copy' },
+        { path: '/new-nid', title: "new nid", Icons: <BsCreditCard2Front /> },
+        {
+            path: '/server-copy/1',
+            title: "server copy (Unofficial)",
+            Icons: <BsDatabaseFillDown />,
+            matchPrefix: '/server-copy',
+        },
         { path: '/auto-nid', title: "auto nid", Icons: <BsCreditCard2Front /> },
         { path: '/auto-etin', title: "auto e-tin", Icons: <BsFileEarmarkMedical /> },
-        { path: '/birth/birth-form', title: "Date of Birth", Icons: <BsFileEarmarkMedical  /> , matchPrefix: '/birth' },
-        { path: '/6', title: "Death of Date", Icons: <BsFileEarmarkMedical  /> },
-        { path: '/7', title: "security clone", Icons: (
+        { path: '/birth', title: "Date of Birth", Icons: <BsFileEarmarkMedical />},
+        { path: '/6', title: "Death of Date", Icons: <BsFileEarmarkMedical /> },
+        {
+            path: '/7',
+            title: "security clone",
+            Icons: (
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M8 0a1 1 0 0 1 1 1v1.402c0 .511.677.693.933.25l.7-1.214a1 1 0 0 1 1.733 1l-.701 1.214c-.256.443.24.939.683.683l1.214-.701a1 1 0 0 1 1 1.732l-1.214.701c-.443.256-.262.933.25.933H15a1 1 0 1 1 0 2h-1.402c-.512 0-.693.677-.25.933l1.214.701a1 1 0 1 1-1 1.732l-1.214-.7c-.443-.257-.939.24-.683.682l.701 1.214a1 1 0 1 1-1.732 1l-.701-1.214c-.256.443-.933-.262-.933-.25V15a1 1 0 1 1-2 0v-1.402c0-.512-.677-.693-.933-.25l-.701 1.214a1 1 0 0 1-1.732-1l.7-1.214c.257-.443-.24-.939-.682-.683l-1.214.701a1 1 0 1 1-1-1.732l1.214-.701c.443-.256.939-.24.683-.683l-.701-1.214a1 1 0 0 1 1.732-1l.701 1.214c.256.443.933.261.933-.25V1a1 1 0 0 1 1-1m2 5a1 1 0 1 0-2 0 1 1 0 0 0 2 0M6 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0m1 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m5-3a1 1 0 1 0-2 0 1 1 0 0 0 2 0"/>
                 </svg>
-            ) },
-        { path: '/8', title: "sign to server copy", Icons: <BsDatabaseFillDown  /> },
-        { path: '/9', title: "File list", Icons: <RiListUnordered  /> },
+            )
+        },
+        { path: '/8', title: "sign to server copy", Icons: <BsDatabaseFillDown /> },
+        { path: '/9', title: "File list", Icons: <RiListUnordered /> },
         { path: '/10', title: "security list", Icons: <RiListUnordered /> },
-        { path: '/11', title: "recharge", Icons: <BsBank2  /> },
+        { path: '/11', title: "recharge", Icons: <BsBank2 /> },
     ];
 
     const Settings = [
@@ -45,7 +54,7 @@ const SideNavbar = ({ sidebarOpen }) => {
         { path: '/13', title: "recover password", Icons: <BsShieldLockFill /> },
         { path: '/14', title: "support", Icons: <BsPatchQuestionFill /> },
         { path: '/16', title: "logout", Icons: <IoPower /> },
-    ]
+    ];
 
     return (
         <Box py={3}>
@@ -61,6 +70,54 @@ const SideNavbar = ({ sidebarOpen }) => {
             <Box display="flex" flexDirection="column" gap={1}>
                 {Navigation.map((item, index) => {
                     const isActive = item.matchPrefix ? pathname.startsWith(item.matchPrefix) : pathname === item.path;
+
+                    return (
+                        <React.Fragment key={index}>
+                            <Link href={item.path}>
+                                <Tooltip title={sidebarOpen ? item.title : ''} placement="right">
+                                    <Box
+                                        sx={{
+                                            display: "flex",
+                                            alignItems: "center",
+                                            gap: sidebarOpen ? 0 : "10px",
+                                            justifyContent: sidebarOpen ? "center" : "flex-start",
+                                            padding: "10px 16px",
+                                            borderRadius: "12px",
+                                            backgroundColor: isActive ? 'var(--sky-blue)' : 'transparent',
+                                            color: isActive ? 'var(--pure-white)' : 'var(--grey-medium)',
+                                            fontWeight: isActive ? 700 : 500,
+                                            cursor: "pointer",
+                                            textDecoration: "none",
+                                            transition: 'all 0.3s ease',
+                                            '&:hover': {
+                                                backgroundColor: isActive ? 'var(--sky-blue)' : 'var(--sky-light)',
+                                                color: !isActive && 'var(--grey-medium)',
+                                            }
+                                        }}
+                                    >
+                                        <Box sx={{ fontSize: "1.4rem", display: 'flex', alignItems: 'center' }}>
+                                            {item.Icons}
+                                        </Box>
+                                        {!sidebarOpen && (
+                                            <Typography sx={{ fontSize: "0.9rem", fontWeight: isActive ? 700 : 500 }}>
+                                                {item.title}
+                                            </Typography>
+                                        )}
+                                    </Box>
+                                </Tooltip>
+                            </Link>
+                        </React.Fragment>
+                    );
+                })}
+            </Box>
+
+            <Typography variant="body1" component="p" sx={{ paddingY: 2, color: "var(--grey-medium)", paddingX: 2 }}>
+                {sidebarOpen ? <FaRegWindowMinimize /> : "Setting"}
+            </Typography>
+
+            <Box display="flex" flexDirection="column" gap={1}>
+                {Settings.map((item, index) => {
+                    const isActive = pathname === item.path;
                     return (
                         <Link href={item.path} key={index}>
                             <Tooltip title={sidebarOpen ? item.title : ''} placement="right">
@@ -80,7 +137,7 @@ const SideNavbar = ({ sidebarOpen }) => {
                                         transition: 'all 0.3s ease',
                                         '&:hover': {
                                             backgroundColor: isActive ? 'var(--sky-blue)' : 'var(--sky-light)',
-                                            color:  !isActive && 'var(--grey-medium)',
+                                            color: !isActive && 'var(--grey-medium)',
                                         }
                                     }}
                                 >
@@ -88,52 +145,7 @@ const SideNavbar = ({ sidebarOpen }) => {
                                         {item.Icons}
                                     </Box>
                                     {!sidebarOpen && (
-                                        <Typography sx={{ fontSize: "0.9rem", transition: 'color 0.3s ease', fontWeight: isActive ? 700 : 500 }}>
-                                            {item.title}
-                                        </Typography>
-                                    )}
-                                </Box>
-                            </Tooltip>
-                        </Link>
-                    );
-                })}
-            </Box>
-
-            <Typography variant="body1" component="p" sx={{ paddingY: 2, color: "var(--grey-medium)", paddingX: 2 }}>
-                {sidebarOpen ? <FaRegWindowMinimize /> : "Setting"}
-            </Typography>
-
-            <Box display="flex" flexDirection="column" gap={1}>
-                {Settings.map((item, index) => {
-                    const isActive = pathname === item.path;
-                    return (
-                        <Link href={item.path} key={index} >
-                            <Tooltip title={sidebarOpen ? item.title : ''} placement="right">
-                                <Box
-                                    sx={{
-                                        display: "flex",
-                                        alignItems: "center",
-                                        gap: sidebarOpen ? 0 : "10px",
-                                        justifyContent: sidebarOpen ? "center" : "flex-start",
-                                        padding: "10px 16px",
-                                        borderRadius: "12px",
-                                        backgroundColor: isActive ? 'var(--sky-blue)' : 'transparent',
-                                        color: isActive ? 'var(--pure-white)' : 'var(--grey-medium)',
-                                        fontWeight: isActive ? 700 : 500,
-                                        cursor: "pointer",
-                                        textDecoration: "none",
-                                        transition: 'all 0.3s ease',
-                                        '&:hover': {
-                                            backgroundColor: isActive ? 'var(--sky-blue)' : 'var(--sky-light)',
-                                            color:  !isActive && 'var(--grey-medium)',
-                                        }
-                                    }}
-                                >
-                                    <Box sx={{ fontSize: "1.4rem", display: 'flex', alignItems: 'center' }}>
-                                        {item.Icons}
-                                    </Box>
-                                    {!sidebarOpen && (
-                                        <Typography sx={{ fontSize: "0.9rem", transition: 'color 0.3s ease', fontWeight: isActive ? 700 : 500 }}>
+                                        <Typography sx={{ fontSize: "0.9rem", fontWeight: isActive ? 700 : 500 }}>
                                             {item.title}
                                         </Typography>
                                     )}

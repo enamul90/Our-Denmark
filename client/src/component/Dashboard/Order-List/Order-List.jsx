@@ -49,7 +49,7 @@ const OrderList = () => {
         <div>
             <Box>
                 <Card sx={{marginBottom:5}}>
-                    <CardContent sx={{ margin: 0, padding: '20px 30px !important' }}>
+                    <CardContent sx={{ margin: 0, padding: '10px 30px !important' }}>
                       <Marquee speed={100}>
                         🛍️ অর্ডার ড্যাশবোর্ড — নতুন অর্ডার এসেছে! 🛒 অর্ডার ড্যাশবোর্ড — নতুন অর্ডার এসেছে! 🛒
                       </Marquee>
