@@ -33,7 +33,7 @@ const SideNavbar = ({ sidebarOpen }) => {
         { path: '/auto-nid', title: "auto nid", Icons: <BsCreditCard2Front /> },
         { path: '/auto-etin', title: "auto e-tin", Icons: <BsFileEarmarkMedical /> },
         { path: '/birth', title: "Date of Birth", Icons: <BsFileEarmarkMedical />},
-        { path: '/6', title: "Death of Date", Icons: <BsFileEarmarkMedical /> },
+        { path: '/death', title: "Death of Date", Icons: <BsFileEarmarkMedical /> },
         {
             path: '/7',
             title: "security clone",
@@ -43,16 +43,16 @@ const SideNavbar = ({ sidebarOpen }) => {
                 </svg>
             )
         },
-        { path: '/8', title: "sign to server copy", Icons: <BsDatabaseFillDown /> },
+        { path: '/sign-to-server-copy/1', title: "sign to server copy", Icons: <BsDatabaseFillDown /> , matchPrefix: '/sign-to-server-copy',},
         { path: '/9', title: "File list", Icons: <RiListUnordered /> },
         { path: '/10', title: "security list", Icons: <RiListUnordered /> },
         { path: '/11', title: "recharge", Icons: <BsBank2 /> },
     ];
 
     const Settings = [
-        { path: '/12', title: "profile", Icons: <CgProfile /> },
-        { path: '/13', title: "recover password", Icons: <BsShieldLockFill /> },
-        { path: '/14', title: "support", Icons: <BsPatchQuestionFill /> },
+        { path: '/profile', title: "profile", Icons: <CgProfile /> },
+        { path: '/change-password', title: "recover password", Icons: <BsShieldLockFill /> },
+        { path: 'https://chat.whatsapp.com/GDOQGshXYL53v6eEk9zjPi', title: "support", external: true , Icons: <BsPatchQuestionFill /> },
         { path: '/16', title: "logout", Icons: <IoPower /> },
     ];
 
@@ -73,7 +73,7 @@ const SideNavbar = ({ sidebarOpen }) => {
 
                     return (
                         <React.Fragment key={index}>
-                            <Link href={item.path}>
+                            <Link href={item.path} target={item.external && "_blank"}>
                                 <Tooltip title={sidebarOpen ? item.title : ''} placement="right">
                                     <Box
                                         sx={{
@@ -119,7 +119,7 @@ const SideNavbar = ({ sidebarOpen }) => {
                 {Settings.map((item, index) => {
                     const isActive = pathname === item.path;
                     return (
-                        <Link href={item.path} key={index}>
+                        <Link href={item.path} key={index} target={item.external && "_blank"} >
                             <Tooltip title={sidebarOpen ? item.title : ''} placement="right">
                                 <Box
                                     sx={{
