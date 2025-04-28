@@ -35,7 +35,7 @@ const SideNavbar = ({ sidebarOpen }) => {
         { path: '/birth', title: "Date of Birth", Icons: <BsFileEarmarkMedical />},
         { path: '/death', title: "Death of Date", Icons: <BsFileEarmarkMedical /> },
         {
-            path: '/7',
+            path: '/surokkha',
             title: "security clone",
             Icons: (
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
@@ -45,7 +45,7 @@ const SideNavbar = ({ sidebarOpen }) => {
         },
         { path: '/sign-to-server-copy/1', title: "sign to server copy", Icons: <BsDatabaseFillDown /> , matchPrefix: '/sign-to-server-copy',},
         { path: '/9', title: "File list", Icons: <RiListUnordered /> },
-        { path: '/10', title: "security list", Icons: <RiListUnordered /> },
+        { path: '/surokkha-list', title: "security list", Icons: <RiListUnordered /> },
         { path: '/11', title: "recharge", Icons: <BsBank2 /> },
     ];
 

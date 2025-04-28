@@ -5,20 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="399317a5-6e4e-4c39-8fc2-2621d97fa6b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/app/change-password/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/death/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/profile/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/sign-to-server-copy/1/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/sign-to-server-copy/2/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/sign-to-server-copy/3/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/sign-to-server-copy/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/Death/DateOfDeath.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/Profile/Profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/Recover-Password/Change-Password.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/SignToServer/SignToServerForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/component/SignToServer/SigntoServerCopy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/surokkha-list/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/surokkha/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/component/Surokkha/Surokkha.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/component/SurokkhaList/SurokkhaList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/DateOfBirth/DateOfBirth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/DateOfBirth/DateOfBirth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/component/Navbar/SideNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Navbar/SideNavbar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,22 +41,22 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/uttom/Desktop/Our-Denmark/client/src/app/sign-to-server-copy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/snap/webstorm/459/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/uttom/Desktop/Our-Denmark/client/src/app/sign-to-server-copy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/snap/webstorm/459/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/app/sign-to-server-copy" />
@@ -98,7 +91,9 @@
       <workItem from="1745632583868" duration="4710000" />
       <workItem from="1745637394193" duration="3463000" />
       <workItem from="1745674683532" duration="4365000" />
-      <workItem from="1745765005354" duration="15377000" />
+      <workItem from="1745765005354" duration="15776000" />
+      <workItem from="1745837625508" duration="745000" />
+      <workItem from="1745840239834" duration="7404000" />
     </task>
     <servers />
   </component>
