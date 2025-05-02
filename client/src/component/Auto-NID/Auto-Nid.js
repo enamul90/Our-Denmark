@@ -53,7 +53,8 @@ const AutoNid = () => {
                         <InputLabel htmlFor="dob">Date of Birth</InputLabel>
                         <TextField
                             id="dob"
-                            type="date"
+                            type="input"
+                            placeholder={"YYYY-MM-DD"}
                             fullWidth
                             size="small"
                         />
@@ -87,7 +88,7 @@ const AutoNid = () => {
                         </Box>
                     )}
                     <Box>
-                        <Typography variant={"body2"} color={"green"}>
+                        <Typography variant={"body1"} color={"green"} textAlign={"center"}>
                             Note: You will be charged 15 tk for Auto NID creation!
                         </Typography>
                         <Button variant="contained"

@@ -19,7 +19,7 @@ import Marquee from "react-fast-marquee";
 const DateOfBirth = () => {
     const [birthRegNo, setBirthRegNo] = useState('');
     const [dateOfBirth, setDateOfBirth] = useState('');
-    const [gender, setGender] = useState('');
+    const [gender, setGender] = useState('male');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -52,54 +52,52 @@ const DateOfBirth = () => {
                             padding: {xs:2, md:4},
                             maxWidth: 500,
                             borderRadius: 2,
-                            textAlign: 'center',
                         }}
                     >
-                        <Typography variant="h5" fontWeight="bold" mb={3}>
+                        <Typography variant="body1" fontSize={"1.5rem"} mb={3} textAlign={"center"}>
                             Enter Birth Info
                         </Typography>
 
                         <form onSubmit={handleSubmit}>
-                            <TextField
-                                label="Birth Reg No"
-                                variant="outlined"
-                                fullWidth
-                                margin="normal"
-                                value={birthRegNo}
-                                onChange={(e) => setBirthRegNo(e.target.value)}
-                                placeholder="Enter Birth Registration Number"
-                            />
+                            <FormControl fullWidth size={"small"} sx={{marginBottom:2}}>
+                                <label htmlFor="">Birth Reg No</label>
+                                <TextField
+                                    variant="outlined"
+                                    fullWidth
+                                    value={birthRegNo}
+                                    onChange={(e) => setBirthRegNo(e.target.value)}
+                                    placeholder="Enter Birth Registration Number"
+                                />
+                            </FormControl>
+                            <FormControl fullWidth size={"small"} >
+                                <label htmlFor="">Date of Birth</label>
+                                <TextField
+                                    variant="outlined"
+                                    fullWidth
+                                    value={dateOfBirth}
+                                    onChange={(e) => setDateOfBirth(e.target.value)}
+                                    placeholder="YYYY-MM-DD"
+                                />
+                            </FormControl>
 
-                            <TextField
-                                variant="outlined"
-                                fullWidth
-                                margin="normal"
-                                value={dateOfBirth}
-                                onChange={(e) => setDateOfBirth(e.target.value)}
-                                placeholder="YYYY-MM-DD"
-                                type="date"
-                                label="Date of Birth"
-                                InputLabelProps={{
-                                    shrink: true,
-                                }}
-                            />
-
-                            <Button
-                                type="submit"
-                                variant="contained"
-                                sx={{
-                                    marginTop: 3,
-                                    background: 'var(--sky-blue)',
-                                    color: '#fff',
-                                    fontWeight: 'bold',
-                                    paddingX: 4,
-                                    paddingY: 1,
-                                    borderRadius: 2,
-                                    width: {xs:"100%", md:'auto'},
-                                }}
-                            >
-                                Get Data
-                            </Button>
+                            <Box textAlign={"center"}>
+                                <Button
+                                    type="submit"
+                                    variant="contained"
+                                    sx={{
+                                        marginTop: 3,
+                                        background: 'var(--sky-blue)',
+                                        color: '#fff',
+                                        fontWeight: 'bold',
+                                        paddingX: 4,
+                                        paddingY: 1,
+                                        borderRadius: 2,
+                                        width: {xs:"100%", md:'auto'},
+                                    }}
+                                >
+                                    Get Data
+                                </Button>
+                            </Box>
                         </form>
                     </Paper>
                 </Box>
@@ -177,20 +175,15 @@ const DateOfBirth = () => {
                                 </FormControl>
                             </Grid>
                             <Grid size={{xs:12 , md:6}}>
-                                <FormControl fullWidth >
+                                <FormControl fullWidth size={"small"}>
                                     <label>Gender</label>
-                                    <select
-                                        style={{
-                                            border: "1px solid grey",
-                                            padding: "15px 14px",
-                                            borderRadius: "5px",
-                                        }}
+                                    <Select
                                         value={gender}
                                         onChange={(e)=>setGender(e.target.value)}
                                     >
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                    </select>
+                                        <MenuItem value="male">Male</MenuItem>
+                                        <MenuItem value="female">Female</MenuItem>
+                                    </Select>
                                 </FormControl>
                             </Grid>
                         </Grid>

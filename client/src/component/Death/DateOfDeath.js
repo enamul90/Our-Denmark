@@ -19,7 +19,8 @@ import Marquee from "react-fast-marquee";
 const DateOfDeath = () => {
     const [birthRegNo, setBirthRegNo] = useState('');
     const [dateOfBirth, setDateOfBirth] = useState('');
-    const [gender, setGender] = useState('');
+    const [gender, setGender] = useState('male');
+    const [deathCause, setDeathCause] = useState('1');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -27,6 +28,8 @@ const DateOfDeath = () => {
         console.log('Date of Birth:', dateOfBirth);
         // Your logic to fetch data here
     };
+
+
 
     return (
         <Box>
@@ -52,54 +55,51 @@ const DateOfDeath = () => {
                             padding: {xs:2, md:4},
                             maxWidth: 500,
                             borderRadius: 2,
-                            textAlign: 'center',
                         }}
                     >
-                        <Typography variant="h5" fontWeight="bold" mb={3}>
+                        <Typography variant="body1" fontSize={"24px"} fontWeight="bold" mb={3} textAlign={"center"}>
                             Enter Birth Info
                         </Typography>
 
                         <form onSubmit={handleSubmit}>
-                            <TextField
-                                label="Birth Reg No"
-                                variant="outlined"
-                                fullWidth
-                                margin="normal"
-                                value={birthRegNo}
-                                onChange={(e) => setBirthRegNo(e.target.value)}
-                                placeholder="Enter Birth Registration Number"
-                            />
-
-                            <TextField
-                                variant="outlined"
-                                fullWidth
-                                margin="normal"
-                                value={dateOfBirth}
-                                onChange={(e) => setDateOfBirth(e.target.value)}
-                                placeholder="YYYY-MM-DD"
-                                type="date"
-                                label="Date of Birth"
-                                InputLabelProps={{
-                                    shrink: true,
-                                }}
-                            />
-
-                            <Button
-                                type="submit"
-                                variant="contained"
-                                sx={{
-                                    marginTop: 3,
-                                    background: 'var(--sky-blue)',
-                                    color: '#fff',
-                                    fontWeight: 'bold',
-                                    paddingX: 4,
-                                    paddingY: 1,
-                                    borderRadius: 2,
-                                    width: {xs:"100%", md:'auto'},
-                                }}
-                            >
-                                Get Data
-                            </Button>
+                            <FormControl fullWidth size={"small"}>
+                                <label htmlFor="">Birth Reg No</label>
+                                <TextField
+                                    variant="outlined"
+                                    fullWidth
+                                    value={birthRegNo}
+                                    onChange={(e) => setBirthRegNo(e.target.value)}
+                                    placeholder="Enter Birth Registration Number"
+                                />
+                            </FormControl>
+                            <FormControl fullWidth size={"small"} sx={{marginTop:3}}>
+                                <label htmlFor="">Date of Birth</label>
+                                <TextField
+                                    variant="outlined"
+                                    fullWidth
+                                    value={dateOfBirth}
+                                    onChange={(e) => setDateOfBirth(e.target.value)}
+                                    placeholder="YYYY-MM-DD"
+                                />
+                            </FormControl>
+                            <Box textAlign={"center"}>
+                                <Button
+                                    type="submit"
+                                    variant="contained"
+                                    sx={{
+                                        marginTop: 3,
+                                        background: 'var(--sky-blue)',
+                                        color: '#fff',
+                                        fontWeight: 'bold',
+                                        paddingX: 4,
+                                        paddingY: 1,
+                                        borderRadius: 2,
+                                        width: {xs:"100%", md:'auto'},
+                                    }}
+                                >
+                                    Get Data
+                                </Button>
+                            </Box>
                         </form>
                     </Paper>
                 </Box>
@@ -187,20 +187,15 @@ const DateOfDeath = () => {
                                 </FormControl>
                             </Grid>
                             <Grid size={{xs:12 , md:6}}>
-                                <FormControl fullWidth >
+                                <FormControl fullWidth size={"small"}>
                                     <label>Gender</label>
-                                    <select
-                                        style={{
-                                            border: "1px solid grey",
-                                            padding: "15px 14px",
-                                            borderRadius: "5px",
-                                        }}
+                                    <Select
                                         value={gender}
                                         onChange={(e)=>setGender(e.target.value)}
                                     >
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                    </select>
+                                        <MenuItem value="male">Male</MenuItem>
+                                        <MenuItem value="female">Female</MenuItem>
+                                    </Select>
                                 </FormControl>
                             </Grid>
                         </Grid>
@@ -272,113 +267,103 @@ const DateOfDeath = () => {
                     <Box>
                         <Grid container spacing={2}>
                             <Grid size={{xs:12 , md:6}}>
-                                <FormControl fullWidth >
+                                <FormControl fullWidth size={"small"} >
                                     <label>মৃত্যুর কারণ (বাংলা)</label>
-                                    <select
-                                        style={{
-                                            border: "1px solid grey",
-                                            padding: "15px 14px",
-                                            borderRadius: "5px",
-                                        }}
-                                        value={gender}
-                                        onChange={(e)=>setGender(e.target.value)}
+                                    <Select
+                                        value={deathCause}
+                                        onChange={(e)=>setDeathCause(e.target.value)}
                                     >
-                                        <option>Select Bangla</option>
-                                        <option value="">ক্রনিক লিভার রোগ</option>
-                                        <option value="">উচ্চ জায়গা হতে পড়ে গিয়ে মৃত্যু</option>
-                                        <option value="">কার্ডিওজেনিক শক</option>
-                                        <option value="">ব্রট ডেড</option>
-                                        <option value="">আনএটেনডেন্ট ডেথ</option>
-                                        <option value="">এ্যাসপিরেশন নিউমোনিয়া</option>
-                                        <option value="">সড়ক দূর্ঘটনা জনিত কারন</option>
-                                        <option value="">এআরডিএস</option>
-                                        <option value="">এমআই</option>
-                                        <option value="">সেপটিসেমিয়া</option>
-                                        <option value="">সিওপিডি</option>
-                                        <option value="">ডায়াবেটিস</option>
-                                        <option value="">উচ্চ রক্তচাপ</option>
-                                        <option value="">হৃদক্রিয়া বন্ধ হয়ে</option>
-                                        <option value="">আত্মহত্যা</option>
-                                        <option value="">সিকেডি - কিডনি জনিত রোগ</option>
-                                        <option value="">হেমারেজিক ডেঙ্গু</option>
-                                        <option value="">পানিতে ডুবে</option>
-                                        <option value="">ইলেক্ট্রোলাইট ইমব্যালেন্স</option>
-                                        <option value="">হত্যা</option>
-                                        <option value="">কোভিড ১৯</option>
-                                        <option value="">প্রাকৃতিক দুর্যোগ</option>
-                                        <option value="">সর্পদংশন</option>
-                                        <option value="">
+                                        <MenuItem value={"1"}>Select Bangla</MenuItem>
+                                        <MenuItem value="">ক্রনিক লিভার রোগ</MenuItem>
+                                        <MenuItem value="">উচ্চ জায়গা হতে পড়ে গিয়ে মৃত্যু</MenuItem>
+                                        <MenuItem value="">কার্ডিওজেনিক শক</MenuItem>
+                                        <MenuItem value="">ব্রট ডেড</MenuItem>
+                                        <MenuItem value="">আনএটেনডেন্ট ডেথ</MenuItem>
+                                        <MenuItem value="">এ্যাসপিরেশন নিউমোনিয়া</MenuItem>
+                                        <MenuItem value="">সড়ক দূর্ঘটনা জনিত কারন</MenuItem>
+                                        <MenuItem value="">এআরডিএস</MenuItem>
+                                        <MenuItem value="">এমআই</MenuItem>
+                                        <MenuItem value="">সেপটিসেমিয়া</MenuItem>
+                                        <MenuItem value="">সিওপিডি</MenuItem>
+                                        <MenuItem value="">ডায়াবেটিস</MenuItem>
+                                        <MenuItem value="">উচ্চ রক্তচাপ</MenuItem>
+                                        <MenuItem value="">হৃদক্রিয়া বন্ধ হয়ে</MenuItem>
+                                        <MenuItem value="">আত্মহত্যা</MenuItem>
+                                        <MenuItem value="">সিকেডি - কিডনি জনিত রোগ</MenuItem>
+                                        <MenuItem value="">হেমারেজিক ডেঙ্গু</MenuItem>
+                                        <MenuItem value="">পানিতে ডুবে</MenuItem>
+                                        <MenuItem value="">ইলেক্ট্রোলাইট ইমব্যালেন্স</MenuItem>
+                                        <MenuItem value="">হত্যা</MenuItem>
+                                        <MenuItem value="">কোভিড ১৯</MenuItem>
+                                        <MenuItem value="">প্রাকৃতিক দুর্যোগ</MenuItem>
+                                        <MenuItem value="">সর্পদংশন</MenuItem>
+                                        <MenuItem value="">
                                             মোডসের সাথে অ্যাকুট স্টেমি (ডায়াট্রোলটাইমিয়া) ট্রান্সমিনিটিস সহ আর্ডস সহ, এমএইচডি, ডিএম, এইচএন, এইচ / ও এনএসটিএমআইয়ের এসএসআরডি।
-                                        </option>
-                                        <option value="">আগুনে পুড়ে মৃত্যু</option>
-                                        <option value="">শারীরিক অসুস্থতা</option>
-                                        <option value="">বৈদ্যুতিক শক</option>
-                                        <option value="">মাতৃমৃত্যু</option>
-                                        <option value="">পোস্ট সিএবিজি কার্ডিয়াক আরসিএসটি</option>
-                                        <option value="">উদরাময়</option>
-                                        <option value="">স্বাভাবিক অবস্থায় মৃত্যুবরন</option>
-                                        <option value="">ক্যান্সারে আক্রান্ত হয়ে মৃত্যুবরণ</option>
-                                        <option value="">ট্রেন দুর্ঘটনা</option>
-                                        <option value="">প্যারালাইসিস</option>
-                                        <option value="">স্ট্রোক</option>
-                                        <option value="">ফুসফুসের সংক্রমণ</option>
-                                        <option value="">Other (Add manually)</option>
-                                    </select>
+                                        </MenuItem>
+                                        <MenuItem value="">আগুনে পুড়ে মৃত্যু</MenuItem>
+                                        <MenuItem value="">শারীরিক অসুস্থতা</MenuItem>
+                                        <MenuItem value="">বৈদ্যুতিক শক</MenuItem>
+                                        <MenuItem value="">মাতৃমৃত্যু</MenuItem>
+                                        <MenuItem value="">পোস্ট সিএবিজি কার্ডিয়াক আরসিএসটি</MenuItem>
+                                        <MenuItem value="">উদরাময়</MenuItem>
+                                        <MenuItem value="">স্বাভাবিক অবস্থায় মৃত্যুবরন</MenuItem>
+                                        <MenuItem value="">ক্যান্সারে আক্রান্ত হয়ে মৃত্যুবরণ</MenuItem>
+                                        <MenuItem value="">ট্রেন দুর্ঘটনা</MenuItem>
+                                        <MenuItem value="">প্যারালাইসিস</MenuItem>
+                                        <MenuItem value="">স্ট্রোক</MenuItem>
+                                        <MenuItem value="">ফুসফুসের সংক্রমণ</MenuItem>
+                                        <MenuItem value="">Other (Add manually)</MenuItem>
+                                    </Select>
                                 </FormControl>
                             </Grid>
                             <Grid size={{xs:12 , md:6}}>
-                                <FormControl fullWidth >
+                                <FormControl fullWidth size={"small"} >
                                     <label>Cause of Death (English)</label>
-                                    <select
-                                        style={{
-                                            border: "1px solid grey",
-                                            padding: "15px 14px",
-                                            borderRadius: "5px",
-                                        }}
-                                        value={gender}
-                                        onChange={(e) => setGender(e.target.value)}
+                                    <Select
+                                        value={deathCause}
+                                        onChange={(e) => setDeathCause(e.target.value)}
                                     >
-                                        <option>Select English</option>
-                                        <option value="">Chronic Liver Disease</option>
-                                        <option value="">Death due to Fall from Height</option>
-                                        <option value="">Cardiogenic Shock</option>
-                                        <option value="">Brutal Death</option>
-                                        <option value="">Unattended Death</option>
-                                        <option value="">Aspiration Pneumonia</option>
-                                        <option value="">Death due to Road Accident</option>
-                                        <option value="">ARDS</option>
-                                        <option value="">Myocardial Infarction (MI)</option>
-                                        <option value="">Septicemia</option>
-                                        <option value="">COPD</option>
-                                        <option value="">Diabetes</option>
-                                        <option value="">High Blood Pressure</option>
-                                        <option value="">Cardiac Arrest</option>
-                                        <option value="">Suicide</option>
-                                        <option value="">CKD - Chronic Kidney Disease</option>
-                                        <option value="">Hemorrhagic Dengue</option>
-                                        <option value="">Drowning</option>
-                                        <option value="">Electrolyte Imbalance</option>
-                                        <option value="">Murder</option>
-                                        <option value="">COVID-19</option>
-                                        <option value="">Natural Disaster</option>
-                                        <option value="">Snake Bite</option>
-                                        <option value="">
+                                        <MenuItem value={"1"}>Select English</MenuItem>
+                                        <MenuItem value="">Chronic Liver Disease</MenuItem>
+                                        <MenuItem value="">Death due to Fall from Height</MenuItem>
+                                        <MenuItem value="">Cardiogenic Shock</MenuItem>
+                                        <MenuItem value="">Brutal Death</MenuItem>
+                                        <MenuItem value="">Unattended Death</MenuItem>
+                                        <MenuItem value="">Aspiration Pneumonia</MenuItem>
+                                        <MenuItem value="">Death due to Road Accident</MenuItem>
+                                        <MenuItem value="">ARDS</MenuItem>
+                                        <MenuItem value="">Myocardial Infarction (MI)</MenuItem>
+                                        <MenuItem value="">Septicemia</MenuItem>
+                                        <MenuItem value="">COPD</MenuItem>
+                                        <MenuItem value="">Diabetes</MenuItem>
+                                        <MenuItem value="">High Blood Pressure</MenuItem>
+                                        <MenuItem value="">Cardiac Arrest</MenuItem>
+                                        <MenuItem value="">Suicide</MenuItem>
+                                        <MenuItem value="">CKD - Chronic Kidney Disease</MenuItem>
+                                        <MenuItem value="">Hemorrhagic Dengue</MenuItem>
+                                        <MenuItem value="">Drowning</MenuItem>
+                                        <MenuItem value="">Electrolyte Imbalance</MenuItem>
+                                        <MenuItem value="">Murder</MenuItem>
+                                        <MenuItem value="">COVID-19</MenuItem>
+                                        <MenuItem value="">Natural Disaster</MenuItem>
+                                        <MenuItem value="">Snake Bite</MenuItem>
+                                        <MenuItem value="">
                                             Death due to Acute STEMI (Diaterotemia) with Transaminitis, ARDS, MHD, DM, HTN, or NSTEMI-associated SSRD.
-                                        </option>
-                                        <option value="">Death due to Fire Burn</option>
-                                        <option value="">Physical Illness</option>
-                                        <option value="">Electric Shock</option>
-                                        <option value="">Maternal Mortality</option>
-                                        <option value="">Post-CABG Cardiac Arrest</option>
-                                        <option value="">Gastroenteritis</option>
-                                        <option value="">Death in Normal Condition</option>
-                                        <option value="">Death due to Cancer</option>
-                                        <option value="">Train Accident</option>
-                                        <option value="">Paralysis</option>
-                                        <option value="">Stroke</option>
-                                        <option value="">Lung Infection</option>
-                                        <option value="">Other (Add manually)</option>
-                                    </select>
+                                        </MenuItem>
+                                        <MenuItem value="">Death due to Fire Burn</MenuItem>
+                                        <MenuItem value="">Physical Illness</MenuItem>
+                                        <MenuItem value="">Electric Shock</MenuItem>
+                                        <MenuItem value="">Maternal Mortality</MenuItem>
+                                        <MenuItem value="">Post-CABG Cardiac Arrest</MenuItem>
+                                        <MenuItem value="">Gastroenteritis</MenuItem>
+                                        <MenuItem value="">Death in Normal Condition</MenuItem>
+                                        <MenuItem value="">Death due to Cancer</MenuItem>
+                                        <MenuItem value="">Train Accident</MenuItem>
+                                        <MenuItem value="">Paralysis</MenuItem>
+                                        <MenuItem value="">Stroke</MenuItem>
+                                        <MenuItem value="">Lung Infection</MenuItem>
+                                        <MenuItem value="">Other (Add manually)</MenuItem>
+                                    </Select>
                                 </FormControl>
                             </Grid>
                         </Grid>

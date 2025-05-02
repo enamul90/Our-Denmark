@@ -23,36 +23,38 @@ const SideNavbar = ({ sidebarOpen }) => {
 
     const Navigation = [
         { path: '/', title: "Order Dashboard", Icons: <AiOutlineDashboard /> },
-        { path: '/new-nid', title: "new nid", Icons: <BsCreditCard2Front /> },
+        { path: '/new-nid', title: "নতুন এনআইডি", Icons: <BsCreditCard2Front /> },
         {
             path: '/server-copy/1',
-            title: "server copy (Unofficial)",
+            title: <>
+                সার্ভার কপি <span style={{ fontSize: '0.7em' }}>(Unofficial)</span>
+            </>,
             Icons: <BsDatabaseFillDown />,
             matchPrefix: '/server-copy',
         },
-        { path: '/auto-nid', title: "auto nid", Icons: <BsCreditCard2Front /> },
-        { path: '/auto-etin', title: "auto e-tin", Icons: <BsFileEarmarkMedical /> },
-        { path: '/birth', title: "Date of Birth", Icons: <BsFileEarmarkMedical />},
-        { path: '/death', title: "Death of Date", Icons: <BsFileEarmarkMedical /> },
+        { path: '/auto-nid', title: "অটো এন.আই.ডি", Icons: <BsCreditCard2Front /> },
+        { path: '/auto-etin', title: "অটো ই-টিন", Icons: <BsFileEarmarkMedical /> },
+        { path: '/birth', title: "জন্ম নিবন্ধন", Icons: <BsFileEarmarkMedical />},
+        { path: '/death', title: "মৃত্যু নিবন্ধন", Icons: <BsFileEarmarkMedical /> },
         {
             path: '/surokkha',
-            title: "security clone",
+            title: "সুরক্ষা ক্লোন",
             Icons: (
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M8 0a1 1 0 0 1 1 1v1.402c0 .511.677.693.933.25l.7-1.214a1 1 0 0 1 1.733 1l-.701 1.214c-.256.443.24.939.683.683l1.214-.701a1 1 0 0 1 1 1.732l-1.214.701c-.443.256-.262.933.25.933H15a1 1 0 1 1 0 2h-1.402c-.512 0-.693.677-.25.933l1.214.701a1 1 0 1 1-1 1.732l-1.214-.7c-.443-.257-.939.24-.683.682l.701 1.214a1 1 0 1 1-1.732 1l-.701-1.214c-.256.443-.933-.262-.933-.25V15a1 1 0 1 1-2 0v-1.402c0-.512-.677-.693-.933-.25l-.701 1.214a1 1 0 0 1-1.732-1l.7-1.214c.257-.443-.24-.939-.682-.683l-1.214.701a1 1 0 1 1-1-1.732l1.214-.701c.443-.256.939-.24.683-.683l-.701-1.214a1 1 0 0 1 1.732-1l.701 1.214c.256.443.933.261.933-.25V1a1 1 0 0 1 1-1m2 5a1 1 0 1 0-2 0 1 1 0 0 0 2 0M6 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0m1 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m5-3a1 1 0 1 0-2 0 1 1 0 0 0 2 0"/>
                 </svg>
             )
         },
-        { path: '/sign-to-server-copy/1', title: "sign to server copy", Icons: <BsDatabaseFillDown /> , matchPrefix: '/sign-to-server-copy',},
-        { path: '/9', title: "File list", Icons: <RiListUnordered /> },
-        { path: '/surokkha-list', title: "security list", Icons: <RiListUnordered /> },
-        { path: '/11', title: "recharge", Icons: <BsBank2 /> },
+        { path: '/sign-to-server-copy/1', title: "সাইন টু সার্ভার কপি", Icons: <BsDatabaseFillDown /> , matchPrefix: '/sign-to-server-copy',},
+        { path: '/9', title: "ফাইল লিস্ট", Icons: <RiListUnordered /> },
+        { path: '/surokkha-list', title: "সুরক্ষা লিস্ট", Icons: <RiListUnordered /> },
+        { path: '/11', title: "রিচার্জ", Icons: <BsBank2 /> },
     ];
 
     const Settings = [
-        { path: '/profile', title: "profile", Icons: <CgProfile /> },
-        { path: '/change-password', title: "recover password", Icons: <BsShieldLockFill /> },
-        { path: 'https://chat.whatsapp.com/GDOQGshXYL53v6eEk9zjPi', title: "support", external: true , Icons: <BsPatchQuestionFill /> },
+        { path: '/profile', title: "প্রোফাইল", Icons: <CgProfile /> },
+        { path: '/change-password', title: "পাসওয়ার্ড পরিবর্তন", Icons: <BsShieldLockFill /> },
+        { path: 'https://chat.whatsapp.com/GDOQGshXYL53v6eEk9zjPi', title: "সাপোর্ট", external: true , Icons: <BsPatchQuestionFill /> },
         { path: '/16', title: "logout", Icons: <IoPower /> },
     ];
 
@@ -85,7 +87,7 @@ const SideNavbar = ({ sidebarOpen }) => {
                                             borderRadius: "12px",
                                             backgroundColor: isActive ? 'var(--sky-blue)' : 'transparent',
                                             color: isActive ? 'var(--pure-white)' : 'var(--grey-medium)',
-                                            fontWeight: isActive ? 700 : 500,
+                                            // fontWeight: isActive ? 700 : 500,
                                             cursor: "pointer",
                                             textDecoration: "none",
                                             transition: 'all 0.3s ease',
@@ -99,7 +101,7 @@ const SideNavbar = ({ sidebarOpen }) => {
                                             {item.Icons}
                                         </Box>
                                         {!sidebarOpen && (
-                                            <Typography sx={{ fontSize: "0.9rem", fontWeight: isActive ? 700 : 500 }}>
+                                            <Typography sx={{ fontSize: "1rem", fontWeight: isActive ? 700 : 500 }}>
                                                 {item.title}
                                             </Typography>
                                         )}
@@ -145,7 +147,7 @@ const SideNavbar = ({ sidebarOpen }) => {
                                         {item.Icons}
                                     </Box>
                                     {!sidebarOpen && (
-                                        <Typography sx={{ fontSize: "0.9rem", fontWeight: isActive ? 700 : 500 }}>
+                                        <Typography sx={{ fontSize: "1rem", fontWeight: isActive ? 700 : 500 }}>
                                             {item.title}
                                         </Typography>
                                     )}

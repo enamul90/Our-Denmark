@@ -1,5 +1,5 @@
 'use client'
-import React, {useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {
     Box, Button, Card, CardContent,
     FormControl,
@@ -12,6 +12,7 @@ import Marquee from "react-fast-marquee";
 
 const NidForm = () => {
     const fileInputRef = useRef(null);
+    const [date, setDate] = useState('');
 
     const handleClick = () => {
         fileInputRef.current?.click();
@@ -24,6 +25,18 @@ const NidForm = () => {
             // You can add upload logic here
         }
     };
+
+
+
+
+
+
+    useEffect(() => {
+        const today = new Date().toISOString().split('T')[0];
+        setDate(today);
+    }, []);
+
+
     return (
         <Box>
             <Card sx={{marginBottom:5}}>
@@ -34,7 +47,7 @@ const NidForm = () => {
                 </CardContent>
             </Card>
             <Paper>
-                <Box sx={{paddingTop: 2}}>
+                <Box sx={{paddingTop: 2, paddingX: {xs:2, md:0} }}>
                     <input
                         ref={fileInputRef}
                         type="file"
@@ -71,7 +84,7 @@ const NidForm = () => {
                         </Typography>
                     </Box>
                 </Box>
-                <Box sx={{p:5 , my:5}}>
+                <Box sx={{p:{xs:2, md:5} , my:5}} className={"space-y-5"}>
                     <Grid container spacing={2}>
                         <Grid size={{xs:12 , md:6}}>
                             <FormControl fullWidth >
@@ -88,106 +101,93 @@ const NidForm = () => {
                     </Grid>
                     <Grid container spacing={2}>
                         <Grid size={{xs:12 , md:6}}>
+                            <label htmlFor="">নাম (বাংলা) *</label>
                             <TextField
-                                label="নাম (বাংলা) *"
                                 placeholder="সম্পূর্ণ নাম বাংলায়"
                                 fullWidth
-                                margin="normal"
                             />
                         </Grid>
                         <Grid size={{xs:12 , md:6}}>
+                            <label htmlFor="">নাম (ইংরেজি) *</label>
                             <TextField
-                                label="নাম (ইংরেজি) *"
                                 placeholder="সম্পূর্ণ নাম ইংরেজিতে"
                                 fullWidth
-                                margin="normal"
                             />
                         </Grid>
                     </Grid>
                     <Grid container spacing={2}>
                         <Grid size={{xs:12 , md:6}}>
+                            <label htmlFor="">এনআইডি নম্বর *</label>
                             <TextField
-                                label="এনআইডি নম্বর *"
                                 placeholder="এনআইডি নম্বর"
                                 fullWidth
-                                margin="normal"
                             />
                         </Grid>
                         <Grid size={{xs:12 , md:6}}>
+                            <label htmlFor="">পিন নম্বর *</label>
                             <TextField
-                                label="পিন নম্বর *"
                                 placeholder="পিন নম্বর"
                                 fullWidth
-                                margin="normal"
                             />
                         </Grid>
                     </Grid>
                     <Grid container spacing={2}>
                         <Grid size={{xs:12 , md:6}}>
+                            <label htmlFor="">পিতার নাম *</label>
                             <TextField
-                                label="পিতার নাম *"
                                 placeholder="পিতার নাম বাংলায়"
                                 fullWidth
-                                margin="normal"
                             />
                         </Grid>
                         <Grid size={{xs:12 , md:6}}>
+                            <label htmlFor="">মাতার নাম *</label>
                             <TextField
-                                label="মাতার নাম *"
                                 placeholder="মাতার নাম বাংলায়"
                                 fullWidth
-                                margin="normal"
                             />
                         </Grid>
                     </Grid>
                     <Grid container spacing={2}>
                         <Grid size={{xs:12 , md:6}}>
+                            <label htmlFor="">জন্মস্থান *</label>
                             <TextField
-                                label="জন্মস্থান *"
                                 placeholder="জন্মস্থান (অবস্থান)"
                                 fullWidth
-                                margin="normal"
                             />
                         </Grid>
                         <Grid size={{xs:12 , md:6}}>
+                            <label htmlFor="">জন্ম তারিখ *</label>
                             <TextField
-                                label="জন্ম তারিখ *"
-                                type="date"
-                                defaultValue="1987-03-20"
+                                placeholder="1987-03-20"
                                 fullWidth
-                                InputLabelProps={{ shrink: true }}
-                                margin="normal"
                             />
                         </Grid>
                     </Grid>
                     <Grid container spacing={2}>
                         <Grid size={{xs:12 , md:6}}>
+                            <label htmlFor="">রক্তের গ্রুপ</label>
                             <TextField
-                                label="রক্তের গ্রুপ"
                                 placeholder="B+"
                                 fullWidth
-                                margin="normal"
                             />
                         </Grid>
                         <Grid size={{xs:12 , md:6}}>
+                            <label htmlFor="">প্রদানের তারিখ *</label>
                             <TextField
-                                label="প্রদানের তারিখ *"
-                                type="date"
-                                defaultValue="2025-04-24"
+                                type="input"
+                                value={date}
+                                onChange={(e) => setDate(e.target.value)}
                                 fullWidth
-                                InputLabelProps={{ shrink: true }}
-                                margin="normal"
                             />
                         </Grid>
                     </Grid>
                     <Box>
+                        <label htmlFor="">ঠিকানা *</label>
                         <TextField
-                            label="ঠিকানা *"
                             placeholder="বাড়ি/হোল্ডিং: (Holding), গ্রাম/রোড: (গ্রাম, রোড), ডাকঘর: (Post Office - Postal Code), উপজেলা, সিটি কর্পোরেশন/পৌরসভা, জেলা"
                             fullWidth
                             multiline
                             rows={3}
-                            margin="normal"
                         />
                     </Box>
                     <Box sx={{

@@ -1,9 +1,10 @@
 'use client';
 import React from 'react';
 import { Box, Button, MenuItem, Paper, Select, TextField, Typography, InputLabel, FormControl } from "@mui/material";
+import {black} from "next/dist/lib/picocolors";
 
 const AutoETin = () => {
-    const [tinOption, setTinOption] = React.useState('');
+    const [tinOption, setTinOption] = React.useState("nid");
     const handleTinChange = (event) => {
         setTinOption(event.target.value);
     };
@@ -27,20 +28,19 @@ const AutoETin = () => {
                 </Typography>
 
                 <Box mt={3}>
-                    <FormControl fullWidth>
-                        <InputLabel id="tin-option-label">TIN Option</InputLabel>
+                    <FormControl fullWidth size={"small"}>
+                        <label id="tin-option-label">TIN Option</label>
                         <Select
-                            labelId="tin-option-label"
-                            id="tin_option"
+                            id="tin-option-label"
                             value={tinOption}
-                            label="TIN Option"
                             onChange={handleTinChange}
+                            color={"dark"}
                         >
-                            <MenuItem value="1">E-TIN with NID number</MenuItem>
-                            <MenuItem value="2">TIN with TIN number</MenuItem>
-                            <MenuItem value="3">TIN number with another TIN</MenuItem>
-                            <MenuItem value="4">Mobile number with TIN</MenuItem>
-                            <MenuItem value="5">Passport number with TIN</MenuItem>
+                            <MenuItem value="nid">এন,আই,ডি নম্বর দিয়ে টিন</MenuItem>
+                            <MenuItem value="tin">টিন নম্বর দিয়ে টিন</MenuItem>
+                            <MenuItem value="oldtin">অল্ড টিন নম্বর দিয়ে টিন</MenuItem>
+                            <MenuItem value="number">মোবাইল নম্বর দিয়ে টিন</MenuItem>
+                            <MenuItem value="passport">পাসপোর্ট নম্বর দিয়ে টিন</MenuItem>
                         </Select>
                     </FormControl>
                 </Box>
@@ -48,14 +48,13 @@ const AutoETin = () => {
                 <Box mt={3}>
                     <TextField
                         fullWidth
-                        label="Enter old TIN Number"
                         variant="outlined"
                         placeholder="1234567890"
                     />
                 </Box>
 
                 <Box mt={4}>
-                    <Typography variant="body2" color="green" mb={2}>
+                    <Typography variant="body1" color="green" mb={2} textAlign={"center"}>
                         <strong>Note:</strong> You will be charged <strong>999 tk</strong> for Auto E-TIN creation!
                     </Typography>
                     <Button variant="contained"

@@ -3,12 +3,11 @@
 
 :root {
     --grey-light: #F3F2F7;
-    --grey-medium: #4B5563;
+    --grey-medium: #707070;
     --pure-white: #FFFFFF;
     --sky-blue: #60a5fa;
-    --sky-light: #e0f2fe;
+    --sky-light: #e7f2fd;
     --vibrant-purple: #EC00FF;
-    /*--sky-light: #7DD3FC;*/
 }
 
 
@@ -16,3 +15,13 @@ body {
     font-family: 'Noto Sans Bengali', sans-serif;
     background-color: var(--grey-light);
 }
+
+
+select{
+    padding: 6px !important;
+}
+
+input{
+    padding: 8px 10px !important;
+}
+

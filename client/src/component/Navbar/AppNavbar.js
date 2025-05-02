@@ -38,7 +38,7 @@ const AppNavbar = ({ children }) => {
                         sx: {
                             top: `${HEADER_HEIGHT}px`,
                             height: `calc(100% - ${HEADER_HEIGHT}px)`,
-                            bgcolor: "var(--pure-white)",
+                            backgroundColor : "var(--sky-light)",
                         }
                     }}
                 >
@@ -59,7 +59,7 @@ const AppNavbar = ({ children }) => {
                 left={0}
                 borderRight="1px solid #ddd"
                 padding={2}
-                bgcolor="var(--pure-white)"
+                bgcolor="var(--sky-light)"
                 sx={{
                     transition: 'width 0.4s ease',
                     overflowY: "auto"
@@ -79,7 +79,7 @@ const AppNavbar = ({ children }) => {
                 left={0}
                 right={0}
                 zIndex={999999}
-                bgcolor="var(--pure-white)"
+                bgcolor="var(--sky-light)"
                 px={{ xs: 1, md: 4 }}
                 height={`${HEADER_HEIGHT}px`}
                 borderBottom="1px solid #ddd"

@@ -1,8 +1,18 @@
-import React from 'react';
-import {Box, Card, CardContent, FormControl, Grid, TextField, Typography} from "@mui/material";
+'use client'
+import React, {useState} from 'react';
+import {Box, Card, CardContent, FormControl, Grid, MenuItem, Select, TextField, Typography} from "@mui/material";
 import Marquee from "react-fast-marquee";
 
 const Surokkha = () => {
+    const [gender, setGender] = useState("male");
+    const [vaccine1,  setVaccine1] = useState("N/A");
+    const [vaccine2,  setVaccine2] = useState("N/A");
+    const [vaccine3,  setVaccine3] = useState("N/A");
+
+    const [dose, setDose] = useState("1");
+
+
+
     return (
         <Box>
             <Card sx={{marginBottom:5}}>
@@ -106,18 +116,15 @@ const Surokkha = () => {
                    </Box>
                     {/*---- Gender: ----*/}
                     <Box>
-                        <FormControl fullWidth>
+                        <FormControl fullWidth size={"small"}>
                             <label htmlFor="gender">Gender :</label>
-                            <select
-                                style={{
-                                    border: "1px solid grey",
-                                    padding: "15px 14px",
-                                    borderRadius: "5px",
-                                }}
+                            <Select
+                                value={gender}
+                                onChange={(e)=>setGender(e.target.value)}
                             >
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                            </select>
+                                <MenuItem value="male">Male</MenuItem>
+                                <MenuItem value="female">Female</MenuItem>
+                            </Select>
                         </FormControl>
                     </Box>
                     {/*---- Nationality : ----*/}
@@ -162,24 +169,21 @@ const Surokkha = () => {
                     </Box>
                     {/*---- Name of vaccine (Dose 1): ----*/}
                     <Box>
-                        <FormControl fullWidth>
+                        <FormControl fullWidth size={"small"}>
                             <label>Name of vaccine (Dose 1):</label>
-                            <select
-                                style={{
-                                    border: "1px solid grey",
-                                    padding: "15px 14px",
-                                    borderRadius: "5px",
-                                }}
+                            <Select
+                                value={vaccine1}
+                                onChange={(e)=>setVaccine1(e.target.value)}
                             >
-                                <option value="1">N/A</option>
-                                <option value="2">Pfizer (Pfizer-BioNTech)</option>
-                                <option value="3">Vero Cell (Sinopharm)</option>
-                                <option value="4">COMIRNATY (Paediatrics)</option>
-                                <option value="5">AstraZeneca (AstraZeneca)</option>
-                                <option value="6">Janssen (Johnson & Johnson)</option>
-                                <option value="7">Moderna (Moderna)</option>
-                                <option value="8">Other</option>
-                            </select>
+                                <MenuItem value="N/A">N/A</MenuItem>
+                                <MenuItem value="Pfizer (Pfizer-BioNTech)">Pfizer (Pfizer-BioNTech)</MenuItem>
+                                <MenuItem value="Vero Cell (Sinopharm)">Vero Cell (Sinopharm)</MenuItem>
+                                <MenuItem value="COMIRNATY (Paediatrics)">COMIRNATY (Paediatrics)</MenuItem>
+                                <MenuItem value="AstraZeneca (AstraZeneca)">AstraZeneca (AstraZeneca)</MenuItem>
+                                <MenuItem value="Janssen (Johnson & Johnson)">Janssen (Johnson & Johnson)</MenuItem>
+                                <MenuItem value="Moderna (Moderna)">Moderna (Moderna)</MenuItem>
+                                <MenuItem value="Other">Other</MenuItem>
+                            </Select>
                         </FormControl>
                     </Box>
                     {/*---- Date of vaccination (Dose 2): ----*/}
@@ -193,24 +197,21 @@ const Surokkha = () => {
                     </Box>
                     {/*---- Name of vaccine (Dose 2): ----*/}
                     <Box>
-                        <FormControl fullWidth>
+                        <FormControl fullWidth size={"small"}>
                             <label>Name of vaccine (Dose 2):</label>
-                            <select
-                                style={{
-                                    border: "1px solid grey",
-                                    padding: "15px 14px",
-                                    borderRadius: "5px",
-                                }}
+                            <Select
+                                value={vaccine2}
+                                onChange={(e)=>setVaccine2(e.target.value)}
                             >
-                                <option value="1">N/A</option>
-                                <option value="2">Pfizer (Pfizer-BioNTech)</option>
-                                <option value="3">Vero Cell (Sinopharm)</option>
-                                <option value="4">COMIRNATY (Paediatrics)</option>
-                                <option value="5">AstraZeneca (AstraZeneca)</option>
-                                <option value="6">Janssen (Johnson & Johnson)</option>
-                                <option value="7">Moderna (Moderna)</option>
-                                <option value="8">Other</option>
-                            </select>
+                                <MenuItem value="N/A">N/A</MenuItem>
+                                <MenuItem value="Pfizer (Pfizer-BioNTech)">Pfizer (Pfizer-BioNTech)</MenuItem>
+                                <MenuItem value="Vero Cell (Sinopharm)">Vero Cell (Sinopharm)</MenuItem>
+                                <MenuItem value="COMIRNATY (Paediatrics)">COMIRNATY (Paediatrics)</MenuItem>
+                                <MenuItem value="AstraZeneca (AstraZeneca)">AstraZeneca (AstraZeneca)</MenuItem>
+                                <MenuItem value="Janssen (Johnson & Johnson)">Janssen (Johnson & Johnson)</MenuItem>
+                                <MenuItem value="Moderna (Moderna)">Moderna (Moderna)</MenuItem>
+                                <MenuItem value="Other">Other</MenuItem>
+                            </Select>
                         </FormControl>
                     </Box>
                     {/*---- Date of vaccination (Dose 3): ----*/}
@@ -224,56 +225,46 @@ const Surokkha = () => {
                     </Box>
                     {/*---- Name of vaccine (Dose 3): ----*/}
                    <Box>
-                       <FormControl fullWidth>
+                       <FormControl fullWidth size={"small"}>
                            <label>Name of vaccine (Dose 3):</label>
-                           <select
-                               style={{
-                                   border: "1px solid grey",
-                                   padding: "15px 14px",
-                                   borderRadius: "5px",
-                               }}
+                           <Select
+                               value={vaccine3}
+                               onChange={(e)=>setVaccine3(e.target.value)}
                            >
-                               <option value="1">N/A</option>
-                               <option value="2">Pfizer (Pfizer-BioNTech)</option>
-                               <option value="3">Vero Cell (Sinopharm)</option>
-                               <option value="4">COMIRNATY (Paediatrics)</option>
-                               <option value="5">AstraZeneca (AstraZeneca)</option>
-                               <option value="6">Janssen (Johnson & Johnson)</option>
-                               <option value="7">Moderna (Moderna)</option>
-                               <option value="8">Other</option>
-                           </select>
+                               <MenuItem value="N/A">N/A</MenuItem>
+                               <MenuItem value="Pfizer (Pfizer-BioNTech)">Pfizer (Pfizer-BioNTech)</MenuItem>
+                               <MenuItem value="Vero Cell (Sinopharm)">Vero Cell (Sinopharm)</MenuItem>
+                               <MenuItem value="COMIRNATY (Paediatrics)">COMIRNATY (Paediatrics)</MenuItem>
+                               <MenuItem value="AstraZeneca (AstraZeneca)">AstraZeneca (AstraZeneca)</MenuItem>
+                               <MenuItem value="Janssen (Johnson & Johnson)">Janssen (Johnson & Johnson)</MenuItem>
+                               <MenuItem value="Moderna (Moderna)">Moderna (Moderna)</MenuItem>
+                               <MenuItem value="Other">Other</MenuItem>
+                           </Select>
                        </FormControl>
                    </Box>
                     {/*---- Vaccination Center: ----*/}
                     <Box>
-                        <FormControl fullWidth>
+                        <FormControl fullWidth size={"small"}>
                             <label>Vaccination Center:</label>
-                            <select
-                                style={{
-                                    border: "1px solid grey",
-                                    padding: "15px 14px",
-                                    borderRadius: "5px",
-                                }}
+                            <Select
+                                value={'1'}
                             >
-                                <option value="1">Dhaka Medical College Hospital</option>
-                            </select>
+                                <MenuItem value="1">Dhaka Medical College Hospital</MenuItem>
+                            </Select>
                         </FormControl>
                     </Box>
                     {/*---- Total Dose Given: ----*/}
                    <Box>
-                       <FormControl fullWidth>
+                       <FormControl fullWidth size={"small"}>
                            <label>Total Dose Given:</label>
-                           <select
-                               style={{
-                                   border: "1px solid grey",
-                                   padding: "15px 14px",
-                                   borderRadius: "5px",
-                               }}
+                           <Select
+                               value={dose}
+                               onChange={(e)=>setDose(e.target.value)}
                            >
-                               <option value="1">Dose 1</option>
-                               <option value="2">Dose 2</option>
-                               <option value="3">Dose 3</option>
-                           </select>
+                               <MenuItem value="1">Dose 1</MenuItem>
+                               <MenuItem value="2">Dose 2</MenuItem>
+                               <MenuItem value="3">Dose 3</MenuItem>
+                           </Select>
                        </FormControl>
                    </Box>
                 </Grid>
