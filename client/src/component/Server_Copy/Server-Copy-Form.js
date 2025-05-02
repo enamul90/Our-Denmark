@@ -48,7 +48,7 @@ const ServerCopyForm = () => {
 
                 <Stack spacing={2}>
                     <Box>
-                        <Typography variant="subtitle1" fontWeight="bold" mb={1}>
+                        <Typography variant="subtitle1" textAlign={"left"} fontWeight="bold">
                             NID Number
                         </Typography>
                         <TextField
@@ -60,7 +60,7 @@ const ServerCopyForm = () => {
                     </Box>
 
                     <Box>
-                        <Typography variant="subtitle1" fontWeight="bold" mb={1}>
+                        <Typography variant="subtitle1" textAlign={"left"} fontWeight="bold" >
                             Date of Birth
                         </Typography>
                         <TextField
@@ -71,18 +71,17 @@ const ServerCopyForm = () => {
                         />
                     </Box>
 
-                    <Typography variant="body2" sx={{ color: 'green', mt: 1 ,}}>
+                    <Typography variant="body1" fontSize={"large"} sx={{ color: 'green', mt: 1 ,}}>
                         Note: You will be charged 5 tk for this Server Copy V{activeVersion} creation!
                     </Typography>
 
                     <Button
+                        className={"btn"}
                         variant="contained"
                         sx={{
                             mt: 2,
-                            background: 'var(--sky-blue)',
                             color: '#fff',
                             fontWeight: 'bold',
-                            borderRadius: '12px',
                             textTransform: 'none',
                         }}
                     >

@@ -196,13 +196,12 @@ const ServerToServerForm = () => {
                             Note: You will be charged 5 tk for this Sine To Server Copy creation !
                         </Typography>
                         <Button
+                            className={"btn"}
                             variant="contained"
                             sx={{
                                 mt: 2,
-                                background: 'var(--sky-blue)',
                                 color: '#fff',
                                 fontWeight: 'bold',
-                                borderRadius: '12px',
                                 textTransform: 'none',
                             }}>
                             Save & Download

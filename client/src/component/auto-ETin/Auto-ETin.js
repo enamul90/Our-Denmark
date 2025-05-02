@@ -54,15 +54,13 @@ const AutoETin = () => {
                 </Box>
 
                 <Box mt={4}>
-                    <Typography variant="body1" color="green" mb={2} textAlign={"center"}>
+                    <Typography variant="body1" color="green" fontSize={"large"} mb={2} textAlign={"center"}>
                         <strong>Note:</strong> You will be charged <strong>999 tk</strong> for Auto E-TIN creation!
                     </Typography>
-                    <Button variant="contained"
+                    <Button className={"btn"} variant="contained"
                             sx={{
-                                background: 'var(--sky-blue)',
                                 color: '#fff',
                                 fontWeight: 'bold',
-                                borderRadius: '10px',
                                 textTransform: 'none',
                                 width: "100%",
                             }}>

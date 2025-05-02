@@ -194,17 +194,16 @@ const NidForm = () => {
                         textAlign:'center',
                         marginTop: 5,
                     }}>
-                        <Typography variant={"body1"} color={"green"} className={"animate-bounce"}>
+                        <Typography variant={"body1"} fontSize={"large"} color={"green"} >
                             Note: You will be charged 4 tk for this NID creation !
                         </Typography>
                         <Button
+                            className={"btn"}
                             variant="contained"
                             sx={{
                                 mt: 2,
-                                background: 'var(--sky-blue)',
                                 color: '#fff',
                                 fontWeight: 'bold',
-                                borderRadius: '12px',
                                 textTransform: 'none',
                             }}>
                             Save & Download

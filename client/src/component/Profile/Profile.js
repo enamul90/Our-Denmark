@@ -61,9 +61,9 @@ const Profile = () => {
                     {/* Update Button */}
                     <Button sx={{
                         width: "100%",
-                        backgroundColor: 'skyblue',
+                        backgroundColor: 'var(--sky-blue)',
                         color: 'white',
-                        padding: '14px',
+                        padding: '10px',
                         borderRadius: '8px',
                         '&:hover': {
                             backgroundColor: 'deepskyblue',

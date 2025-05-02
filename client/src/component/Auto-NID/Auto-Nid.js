@@ -88,13 +88,12 @@ const AutoNid = () => {
                         </Box>
                     )}
                     <Box>
-                        <Typography variant={"body1"} color={"green"} textAlign={"center"}>
+                        <Typography variant={"body1"} color={"green"} fontSize={"large"} textAlign={"center"}>
                             Note: You will be charged 15 tk for Auto NID creation!
                         </Typography>
-                        <Button variant="contained"
+                        <Button className={"btn"} variant="contained"
                                 sx={{
                                     mt: 2,
-                                    background: 'var(--sky-blue)',
                                     color: '#fff',
                                     fontWeight: 'bold',
                                     borderRadius: '12px',
