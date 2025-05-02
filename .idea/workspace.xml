@@ -7,13 +7,14 @@
     <list default="true" id="399317a5-6e4e-4c39-8fc2-2621d97fa6b3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/component/Auto-NID/Auto-Nid.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Auto-NID/Auto-Nid.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/component/DateOfBirth/DateOfBirth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/DateOfBirth/DateOfBirth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/component/Death/DateOfDeath.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Death/DateOfDeath.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/Navbar/AppNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Navbar/AppNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/Navbar/SideNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Navbar/SideNavbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/component/New_NID/Nid-Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/New_NID/Nid-Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/Recover-Password/Change-Password.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Recover-Password/Change-Password.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/Server_Copy/Server-Copy-Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Server_Copy/Server-Copy-Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/SignToServer/SignToServerForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/SignToServer/SignToServerForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/component/Surokkha/Surokkha.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Surokkha/Surokkha.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/component/auto-ETin/Auto-ETin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/auto-ETin/Auto-ETin.js" afterDir="false" />
     </list>
@@ -99,7 +100,7 @@
       <workItem from="1745840239834" duration="9115000" />
       <workItem from="1746020063454" duration="1263000" />
       <workItem from="1746021954761" duration="21000" />
-      <workItem from="1746153151851" duration="7503000" />
+      <workItem from="1746153151851" duration="9471000" />
     </task>
     <servers />
   </component>

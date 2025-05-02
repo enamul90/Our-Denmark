@@ -25,3 +25,9 @@ input{
     padding: 8px 10px !important;
 }
 
+.btn{
+    background: linear-gradient(45deg, #7f00ff, #e100ff) !important;
+    color: white;
+    padding: 8px 32px !important;
+}
+

@@ -84,16 +84,13 @@ const DateOfDeath = () => {
                             </FormControl>
                             <Box textAlign={"center"}>
                                 <Button
+                                    className={"btn"}
                                     type="submit"
                                     variant="contained"
                                     sx={{
                                         marginTop: 3,
-                                        background: 'var(--sky-blue)',
                                         color: '#fff',
                                         fontWeight: 'bold',
-                                        paddingX: 4,
-                                        paddingY: 1,
-                                        borderRadius: 2,
                                         width: {xs:"100%", md:'auto'},
                                     }}
                                 >
@@ -404,15 +401,12 @@ const DateOfDeath = () => {
                         textAlign: 'center',
                         paddingBottom: 5
                     }}>
-                        <Typography variant={"body1"} color={"green"} >
+                        <Typography variant={"body1"} fontSize={"large"} color={"green"} >
                             Note: You will be charged 30 tk for this birth creation !
                         </Typography>
-                        <Button  variant="contained" sx={{
-                            backgroundColor: 'var(--sky-blue)',
+                        <Button className={"btn"}  variant="contained" sx={{
                             width: {xs:'100%', md:'auto'},
                             marginY: 2,
-                            paddingY:2,
-                            paddingX: 5,
                         }}>
                             Save & Download
                         </Button>
